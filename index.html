@@ -14,24 +14,16 @@
 
     :root {
       --navy: #060e1e;
-      --navy-mid: #0d1f3c;
       --gold: #c9a84c;
-      --gold-light: #e8c876;
-      --cream: #f5f0e8;
       --text-muted: #8a9bb8;
       --border: rgba(201,168,76,0.2);
-      --data-color: #3a7bd5;
-      --accounting-color: #2eb87a;
-      --marketing-color: #e05c5c;
+      --cream: #f5f0e8;
     }
-
-    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--navy);
       color: var(--cream);
-      overflow-x: hidden;
     }
 
     /* NAV */
@@ -41,18 +33,17 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 18px 50px;
+      align-items: center;
+      padding: 14px 50px;
       background: rgba(6,14,30,0.9);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       z-index: 100;
     }
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--gold);
-      text-decoration: none;
+    .logo img {
+      height: 38px;
+      display: block;
     }
 
     .nav-links a {
@@ -67,8 +58,15 @@
 
     /* HERO */
     .hero {
-      padding: 140px 50px 80px;
+      padding: 160px 50px 100px;
       text-align: center;
+
+      /* HEADER IMAGE ADDED */
+      background: 
+        linear-gradient(rgba(6,14,30,0.75), rgba(6,14,30,0.85)),
+        url('header.png');
+      background-size: cover;
+      background-position: center;
     }
 
     .hero h1 {
@@ -112,7 +110,6 @@
       color: var(--cream);
     }
 
-    /* SECTIONS */
     section {
       padding: 80px 50px;
       max-width: 1000px;
@@ -147,20 +144,17 @@
       border-radius: 6px;
       font-size: 13px;
     }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-    }
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <a class="logo" href="#">+Value</a>
+  <a class="logo" href="#">
+    <img src="logo.png" alt="+Value Logo">
+  </a>
+
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
@@ -170,6 +164,7 @@
 <!-- HERO -->
 <div class="hero">
   <h1>Smart solutions for <span>business growth</span></h1>
+
   <p>
     +Value helps businesses improve operations using data, automation, and digital tools.
     We focus on practical solutions tailored to each client’s needs.
@@ -222,17 +217,12 @@
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>If you'd like to discuss a project or idea, reach out:</p>
 
   <div class="card">
     <p><strong>Email:</strong> adnanmortada94@gmail.com</p>
     <a class="cta" href="mailto:adnanmortada94@gmail.com">Send Email</a>
   </div>
 </section>
-
-<footer>
-  © 2026 +Value — All rights reserved
-</footer>
 
 </body>
 </html>
